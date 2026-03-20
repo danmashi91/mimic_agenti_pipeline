@@ -303,5 +303,5 @@ Code is released under the MIT License.
 ## Acknowledgements
 
 - MIMIC-IV database: Beth Israel Deaconess Medical Center / PhysioNet
-- Saint Louis University Department of Health and Clinical Outcomes Research
+- Saint Louis University School for Professional Studies
 - Anthropic Claude API for AI-powered research interpretation
