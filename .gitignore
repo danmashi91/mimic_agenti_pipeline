@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────
+# MIMIC-IV Pipeline — .gitignore
+# ─────────────────────────────────────────────
+
+# Environment & secrets
+.env
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data — NEVER commit MIMIC-IV data
+data/
+*.csv
+*.parquet
+*.feather
+*.h5
+
+# Models — too large for git (use git-lfs or separate storage)
+models/*.pkl
+models/*.pt
+models/*.bin
+
+# Outputs
+outputs/
+*.docx
+*.pdf
+
+# Node
+node_modules/
+package-lock.json
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/settings.json
+
+# Logs
+*.log
+logs/

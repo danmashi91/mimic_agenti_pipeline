@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────
+# MIMIC-IV Multi-Agent Pipeline — Dependencies
+# Python 3.12
+# ─────────────────────────────────────────────
+
+# ── LLM & Agent Framework ─────────────────────
+anthropic>=0.25.0              # Claude API client
+langchain>=0.2.0               # Agent orchestration framework
+langchain-anthropic>=0.1.0     # LangChain x Claude integration
+langchain-community>=0.2.0     # Community tools (SQL, etc.)
+
+# ── Database ──────────────────────────────────
+psycopg2-binary>=2.9.9         # PostgreSQL driver for MIMIC-IV
+sqlalchemy>=2.0.0              # ORM + query builder
+db-dtypes>=1.2.0              # Required by google-cloud-bigquery for pandas conversion
+
+# ── Data Processing ───────────────────────────
+pandas>=2.2.0
+numpy>=1.26.0
+polars>=0.20.0                 # Fast alternative to pandas for large tables
+
+# ── Machine Learning ──────────────────────────
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+lightgbm>=4.3.0
+imbalanced-learn>=0.12.0       # For handling class imbalance in readmission labels
+
+# ── Deep Learning (LSTM for Paper 3) ──────────
+torch>=2.2.0                   # PyTorch for LSTM model
+
+# ── Explainability ────────────────────────────
+shap>=0.45.0
+
+# ── Statistical Analysis ──────────────────────
+scipy>=1.13.0
+statsmodels>=0.14.0
+pingouin>=0.5.4                # Clean statistical tests
+
+# ── Configuration & Environment ───────────────
+python-dotenv>=1.0.0           # Loads .env file
+pyyaml>=6.0.1                  # Reads config.yaml
+
+# ── Utilities ─────────────────────────────────
+tqdm>=4.66.0                   # Progress bars
+loguru>=0.7.0                  # Clean logging
+
+# ── Notebooks ─────────────────────────────────
+ipykernel>=6.29.0              # Jupyter kernel for VS Code notebooks
+jupyter>=1.0.0

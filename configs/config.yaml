@@ -1,0 +1,42 @@
+# ─────────────────────────────────────────────────────────
+# MIMIC-IV Multi-Agent Pipeline — Configuration
+# ─────────────────────────────────────────────────────────
+
+# ── Google BigQuery ───────────────────────────────────────
+bigquery:
+  project_id: mimiciv-project-2026
+  source_project: physionet-data        # where MIMIC-IV lives
+  dataset: mimiciv_3_1_hosp
+  icu_dataset: mimiciv_3_1_icu
+  location: US                          # BigQuery dataset region
+
+# ── LLM (Claude API) ─────────────────────────────────────
+llm:
+  provider: anthropic
+  model: claude-sonnet-4-6
+  max_tokens: 1000
+  api_key_env: ANTHROPIC_API_KEY  # loaded from .env
+
+# ── Pipeline Settings ────────────────────────────────────
+pipeline:
+  random_seed: 42
+  test_size: 0.2                  # 80/20 train-test split
+  cv_folds: 5                     # cross-validation folds
+
+# ── Paper 1: Cost Prediction ─────────────────────────────
+cost_prediction:
+  target_variable: total_charges  # or drg_adjusted_cost
+  log_transform: true             # log-transform skewed costs
+  top_n_diagnoses: 5              # top ICD-10 codes as features
+
+# ── Paper 3: ICU Readmission ─────────────────────────────
+readmission:
+  window_hours: 72                # readmission within 72hrs
+  exclude_icu_deaths: true        # competing event exclusion
+  min_icu_los_hours: 4            # minimum ICU stay to include
+
+# ── Logging ──────────────────────────────────────────────
+logging:
+  level: INFO
+  log_to_file: true
+  log_dir: outputs/logs
