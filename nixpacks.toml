@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python312"]
+
+[phases.install]
+cmds = ["pip install fastapi uvicorn anthropic python-dotenv numpy pandas scikit-learn xgboost lightgbm shap joblib httpx"]
+
+[start]
+cmd = "uvicorn api.main:app --host 0.0.0.0 --port 8000"
