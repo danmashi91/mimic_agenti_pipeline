@@ -4,7 +4,9 @@ import {
   ResponsiveContainer, Cell, ReferenceLine
 } from "recharts";
 
-const API = "http://localhost:8000";
+import API_URL from "./config.js";
+const API = API_URL;
+
 const post = async (path, body) => {
   const r = await fetch(`${API}${path}`, {
     method: "POST", headers: { "Content-Type": "application/json" },
