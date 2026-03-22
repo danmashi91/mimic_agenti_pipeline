@@ -1,3 +1,4 @@
+cat > railway.json << 'EOF'
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
@@ -5,10 +6,8 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "uvicorn api.main:app --host 0.0.0.0 --port $PORT",
-    "healthcheckPath": "/health",
-    "healthcheckTimeout": 30,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3
   }
 }
+EOF
