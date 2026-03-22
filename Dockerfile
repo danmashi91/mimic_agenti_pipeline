@@ -37,3 +37,4 @@ EXPOSE 8000
 
 # Start the API
 CMD ["python", "start.py"]
+# force rebuild
