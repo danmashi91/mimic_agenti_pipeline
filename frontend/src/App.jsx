@@ -304,7 +304,7 @@ function ResearchPage() {
             <SL>Research team</SL>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(260px,1fr))", gap: 14 }}>
               {[
-                { initials: "AA", name: "Abubakar Abbas Sani", role: "Graduate Researcher", detail: "MS Analytics · School for Professional Studies · Saint Louis University", bio: "9 years professional experience as a Building Officer with an undergraduate degree in Construction Management. Research focus: health data analytics using MIMIC-IV, covering healthcare cost prediction, ICU cost disparity analysis, and ICU readmission prediction. Building toward EB-2 NIW filing with research portfolio aligned to federal health policy priorities." },
+                { initials: "AA", name: "Abubakar Abbas Sani", role: "Graduate Researcher", detail: "MS Analytics · School for Professional Studies · Saint Louis University", bio: "9 years professional experience as a Building Officer with an undergraduate degree in Construction Management. Research focus: health data analytics using MIMIC-IV, covering healthcare cost prediction, ICU cost disparity analysis, and ICU readmission prediction." },
                 { initials: "MT", name: "Mohammad Tahir", role: "Graduate Researcher", detail: "MS Analytics · School for Professional Studies · Saint Louis University", bio: "Graduate student in the MS Analytics programme at Saint Louis University. Co-researcher on the MIMIC-IV clinical analytics pipeline, contributing to methodology development and analysis across the three-paper research portfolio." },
               ].map(p => (
                 <div key={p.name} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 12, padding: "18px 20px" }}>
